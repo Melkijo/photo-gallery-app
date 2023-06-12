@@ -9,7 +9,7 @@ const Modal = ({ data, content, setSelectedContent, setShowModal }) => {
                 </div>
                 <div style={styles.splitContainer}>
                     <div style={styles.modalImageContainer}>
-                        <img style={styles.modalImage} src={url} />
+                        <img style={styles.modalImage} src={url} alt={name} />
                         <p style={styles.modalDescriptionText}>{description}</p>
                     </div>
                     <div style={styles.modalDescription}>
@@ -31,7 +31,7 @@ const Modal = ({ data, content, setSelectedContent, setShowModal }) => {
                                     setSelectedContent(image_data);
                                 }}
                             >
-                                <img style={styles.image} src={image_data.url} />
+                                <img style={styles.image} src={image_data.url} alt={image_data.name} />
                             </div>
                         );
                     })}
